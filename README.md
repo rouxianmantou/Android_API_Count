@@ -10,3 +10,5 @@ ___
 5. 输出如下图所示
 6. 删除/[your path..]/Android_API_Count/target中的内容
 ___
+
+![output_img](output_img.jpg)
