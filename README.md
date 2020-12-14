@@ -2,7 +2,11 @@
 ___
 ## 环境：Python3
 ___
-## 请将需要统计import的文件夹放到/target
-## 然后执行count_import.py开始统计
-## 需要手动删除/target下的内容
+## 使用方法：
+1. git clone https://github.com/rouxianmantou/Android_API_Count.git
+2. cd Android_API_Count
+3. 将要统计的包放到 /[your path..]/Android_API_Count/target下
+4. python3 count_import.py
+5. 输出如下图所示
+6. 删除/[your path..]/Android_API_Count/target中的内容
 ___
