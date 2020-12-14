@@ -38,22 +38,28 @@ java_pattern = re.compile(r'^[a-zA-Z_\$\u4e00-\u9fa5][\w_\$\u4e00-\u9fa5]+\.java
 
 for home, dirs, files in os.walk(os.getcwd() + '/target'):
     for filename in files:
+        #判断是否为java文件
         if(re.match(java_pattern,filename)!=None):
             fullname = os.path.join(home, filename)
             with open(fullname ,mode='r',encoding='UTF-8') as file_obj:
                 try:
                     for line in file_obj:
+                        #开始读import
                         if(line.startswith('import')):
                             is_other_api=True
+                            
                             for i in range(0,len(current_known_api_list)):
+                                #遍历已知的api
                                 if(line.startswith('import ' + current_known_api_list[i])):
                                     is_other_api=False
                                     need_add_api=True
+                                    #遍历此import需不需要添加
                                     for j in range(0,len(appeared_api_list)):
                                         if(line==appeared_api_list[j]):
                                             need_add_api=False
                                     if(need_add_api):
                                         appeared_api_list.append(line)
+                                        #这个值没啥用
                                         appeared_api_cnt[i] += 1
                                         appeared_all_cnt += 1
                                 # api_not_included.append()
@@ -72,5 +78,5 @@ for home, dirs, files in os.walk(os.getcwd() + '/target'):
 
 
 print("*************************************************************************")
-print('总共已知的Android API数量（请注意以上为统计在内的import）: ', appeared_all_cnt)
+print('总共已知的Android API数量（请注意以上未统计在内的import）: ', appeared_all_cnt)
 print("END END END END END END END END END END END END END END END END END END END END")
