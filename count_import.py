@@ -12,8 +12,8 @@ current_known_api_list = []
 with open('sdkApi.txt','r',encoding='UTF-8') as f:
     for line in f.readlines():
          current_known_api_list.append(line.strip("\n"))
-print("目前参与统计Android API大类数量为：",len(current_known_api_list))
-print("添加和修改sdkApi.txt时，请注意不要添加重复类和大类下的小类")
+print("目前参与统计Android API类的数量为：",len(current_known_api_list))
+print("可以自行添加和修改sdkApi.txt。")
 print("未统计的API已经筛选，使用白名单模式，参考：count_import.py -> line_#77")
 print("统计路径为："+ tar_path)
 print("*************************************************************************")
