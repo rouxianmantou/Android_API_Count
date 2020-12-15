@@ -16,6 +16,7 @@ android.icu
 android.inputmethodservice
 android.location
 android.media
+android.Manifest
 android.mtp
 android.net
 android.nfc
