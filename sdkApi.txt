@@ -50,3 +50,4 @@ junit.runner
 androidx
 android.annotation
 android.support
+com.google.android.gms
