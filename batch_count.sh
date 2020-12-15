@@ -22,7 +22,7 @@ do
     python3 count_import.py $find_dirs >> $result_path$abs_result_path"_"$tar_basename.txt 
 
     #写入result_all.txt
-    cat $result_path$abs_result_path"_"$tar_basename.txt | while read line
+    cat $result_path$abs_result_path"_"$tar_basename.txt | awk '{print $0}' | while read line
     do
     echo $line >> $result_path/result_all.txt
     done
