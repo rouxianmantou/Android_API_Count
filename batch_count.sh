@@ -17,12 +17,15 @@ do
 
     #第一行为文件夹名
     echo `basename $find_dirs` > $result_path$abs_result_path"_"$tar_basename.txt
-    echo `basename $find_dirs` >> $result_path/result_all.txt
 
     #开始统计
     python3 count_import.py $find_dirs >> $result_path$abs_result_path"_"$tar_basename.txt 
-    #这里有点蠢
-    python3 count_import.py $find_dirs >> $result_path/result_all.txt
+
+    #写入result_all.txt
+    cat $result_path$abs_result_path"_"$tar_basename.txt | while read line
+    do
+    echo $line >> $result_path/result_all.txt
+    done
 
     echo "" >> $result_path/result_all.txt
     echo "" >> $result_path/result_all.txt
