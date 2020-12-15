@@ -5,6 +5,8 @@ import os
 import sys
 import re
 
+tar_path = sys.argv[1]
+
 #读取当前已知的api文件
 current_known_api_list = []
 with open('sdkApi.txt','r',encoding='UTF-8') as f:
@@ -12,7 +14,7 @@ with open('sdkApi.txt','r',encoding='UTF-8') as f:
          current_known_api_list.append(line.strip("\n"))
 print("目前参与统计Android API大类数量为：",len(current_known_api_list))
 print("添加和修改sdkApi.txt时，请注意不要添加重复类和大类下的小类")
-print("统计路径为："+ os.getcwd() + '/target')
+print("统计路径为："+ tar_path)
 print("*************************************************************************")
 print("*************************************************************************")
 print("START START START START START START START START START START START START START START START")
@@ -36,7 +38,8 @@ for i in range(0,len(current_known_api_list)):
 
 java_pattern = re.compile(r'^[a-zA-Z_\$\u4e00-\u9fa5][\w_\$\u4e00-\u9fa5]+\.java$')
 
-for home, dirs, files in os.walk(os.getcwd() + '/target'):
+# for home, dirs, files in os.walk(os.getcwd() + '/target'):
+for home, dirs, files in os.walk(tar_path):
     for filename in files:
         #判断是否为java文件
         if(re.match(java_pattern,filename)!=None):
