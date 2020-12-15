@@ -51,3 +51,9 @@ androidx
 android.annotation
 android.support
 com.google.android.gms
+com.google.android.material
+com.google.android.play
+com.google.android.libraries
+android.databinding
+android.arch
+com.android
