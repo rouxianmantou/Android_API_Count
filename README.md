@@ -2,7 +2,7 @@
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/rouxianmantou/Android_API_Count)
 
-## 环境：Python3
+## 环境：Python3 / Bash
 
 ## 使用方法：
 1. git clone https://github.com/rouxianmantou/Android_API_Count.git
