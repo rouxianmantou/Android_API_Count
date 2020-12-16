@@ -22,7 +22,7 @@ Android API统计
 7. 单个统计输出如下图所示
 8. 删除/[your path..]/Android_API_Count/target中的内容
 
-![output_img](output_img.jpg)
+![output_img](android_api_statistic/output_img.jpg)
 ### 1.2. 批量下载和统计方法:
 
 1. 将要统计的github repo名称放到clone_lib_list中。如：gyf-dev/ImmersionBar
