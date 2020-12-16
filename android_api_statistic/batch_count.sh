@@ -5,6 +5,7 @@ abs_result_path="/result"
 
 lib_path=`pwd`$abs_tar_path
 result_path=`pwd`$abs_result_path
+
 echo "" > $result_path/result_all.txt
 
 for find_dirs in ${lib_path}/*
