@@ -14,8 +14,8 @@ Android API统计
 ### 1.1. 使用方法(手动下载repo后使用):
 
 1. git clone https://github.com/rouxianmantou/Android_API_Count.git
-2. cd Android_API_Count
-3. 将要统计的包的**整体文件夹**放到 /[your path..]/Android_API_Count/target下
+2. cd /Android_API_Count/android_api_statistic
+3. 将要统计的包的**整体文件夹**放到 /[your path..]/Android_API_Count/android_api_statistic/target下
 4. chmod +x batch_count.sh
 5. ./batch_count.sh
 6. 统计结果放在/result下，有单独模块的result_xxx.txt，也有结果集合参考result_all.txt
@@ -44,11 +44,12 @@ ___
 
 ### 2.1. 使用方法(手动下载repo后使用):
 
-1. cd 3rd_party_api_statistic
-2. chmod +x batch_count_excluded_api.sh
-3. ./batch_count_excluded_api.sh
-4. 统计结果放在/result下，每个repo的统计结果单独放置，因为**统计口径**与**repo作者代码本身的问题**，数据不完全准确，请浏览结果中的列表甄别
-5. 保存和删除/target与/result中内容
+1. cd /Android_API_Count/3rd_party_api_statistic
+2. 将要统计的包的**整体文件夹**放到 /[your path..]/Android_API_Count/3rd_party_api_statistic/target下
+3. chmod +x batch_count_excluded_api.sh
+4. ./batch_count_excluded_api.sh
+5. 统计结果放在/result下，每个repo的统计结果单独放置，因为**统计口径**与**repo作者代码本身的问题**，数据不完全准确，请浏览结果中的列表甄别
+6. 保存和删除/target与/result中内容
 
 ### 2.2. 批量下载和统计方法:
 
