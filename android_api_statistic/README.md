@@ -1,6 +1,7 @@
 # Android_API_Count
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/rouxianmantou/Android_API_Count)
+![GitHub](https://img.shields.io/github/license/rouxianmantou/Android_API_Count)
 
 ## 环境：Python3 / Bash
 
