@@ -16,7 +16,7 @@ with open('sdkApi.txt', 'r', encoding='UTF-8') as f:
 
 print("目前参与统计Android API类的数量为：", len(current_known_api_list))
 print("可以自行添加和修改sdkApi.txt。")
-print("未统计的API已经筛选，使用白名单模式，参考：count_import.py -> line_#77")
+# print("未统计的API已经筛选，使用白名单模式，参考：count_import.py -> line_#77")
 print("统计路径为：" + tar_path)
 print("*************************************************************************")
 print("*************************************************************************")
@@ -74,8 +74,8 @@ for home, dirs, files in os.walk(tar_path):
                                         need_add_other_api = False
                                 if(need_add_other_api):
                                     api_not_included.append(line)
-                                    if(("android" in line) or ("google" in line) or ("dalvik" in line) or (("support" in line))):
-                                        print(line)
+                                    # if(("android" in line) or ("google" in line) or ("dalvik" in line) or (("support" in line))):
+                                    print(line)
                     file_obj.close()
                 except UnicodeDecodeError:
                     print('UnicodeDecodeError error')
