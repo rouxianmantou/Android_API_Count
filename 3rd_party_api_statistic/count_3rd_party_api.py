@@ -81,7 +81,7 @@ for home, dirs, files in os.walk(tar_path):
                                     break
                             if(is_need_show):
                                 cur_excluded_api_count += 1
-                                print(line)
+                                print(line, end='')
                     file_obj.close()
                 except UnicodeDecodeError:
                     print('UnicodeDecodeError error')

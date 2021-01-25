@@ -22,8 +22,8 @@ do
     echo "START CLONE -> $line"
     echo "$line" >> $lib_path/git_clone_info.log
 
-
-    if ! `git clone https://github.com/"$line" --progress --depth 1 --single-branch`
+    # if ! `git clone https://github.com/"$line" --progress --depth 1 --single-branch`
+    if ! `git clone https://github.com/"$line"`
     then
       echo "FAILED!!!!!!" >> $lib_path/git_clone_info.log
     else

@@ -66,6 +66,7 @@ for home, dirs, files in os.walk(tar_path):
                                         # 这个值没啥用
                                         appeared_api_cnt[i] += 1
                                         appeared_all_cnt += 1
+                                        # print(line)
 
                             if(is_other_api):
                                 need_add_other_api = True
@@ -75,7 +76,7 @@ for home, dirs, files in os.walk(tar_path):
                                 if(need_add_other_api):
                                     api_not_included.append(line)
                                     # if(("android" in line) or ("google" in line) or ("dalvik" in line) or (("support" in line))):
-                                    print(line)
+                                    print(line, end='')
                     file_obj.close()
                 except UnicodeDecodeError:
                     print('UnicodeDecodeError error')
